@@ -1,0 +1,16 @@
+D:\GitHub\bazStart\bazStart\bin\Debug\bazStart.exe.config
+D:\GitHub\bazStart\bazStart\bin\Debug\bazStart.exe
+D:\GitHub\bazStart\bazStart\bin\Debug\bazStart.pdb
+D:\GitHub\bazStart\bazStart\obj\Debug\bazStart.csproj.AssemblyReference.cache
+D:\GitHub\bazStart\bazStart\obj\Debug\bazStart.csproj.SuggestedBindingRedirects.cache
+D:\GitHub\bazStart\bazStart\obj\Debug\MainWindow.g.cs
+D:\GitHub\bazStart\bazStart\obj\Debug\App.g.cs
+D:\GitHub\bazStart\bazStart\obj\Debug\bazStart_MarkupCompile.cache
+D:\GitHub\bazStart\bazStart\obj\Debug\bazStart_MarkupCompile.lref
+D:\GitHub\bazStart\bazStart\obj\Debug\MainWindow.baml
+D:\GitHub\bazStart\bazStart\obj\Debug\bazStart.g.resources
+D:\GitHub\bazStart\bazStart\obj\Debug\bazStart.Properties.Resources.resources
+D:\GitHub\bazStart\bazStart\obj\Debug\bazStart.csproj.GenerateResource.cache
+D:\GitHub\bazStart\bazStart\obj\Debug\bazStart.csproj.CoreCompileInputs.cache
+D:\GitHub\bazStart\bazStart\obj\Debug\bazStart.exe
+D:\GitHub\bazStart\bazStart\obj\Debug\bazStart.pdb
