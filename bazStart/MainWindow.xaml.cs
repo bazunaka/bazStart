@@ -22,17 +22,39 @@ namespace bazStart
     public partial class MainWindow : Window
     {
         string[] files = Directory.GetFiles(Directory.GetCurrentDirectory() + "\\downloads/");
+        string unzip_dir = Directory.GetCurrentDirectory();
         
         public MainWindow()
         {
             InitializeComponent();           
             FileInfo fileInf = new FileInfo(files[0]);
+            unzip_dir = unzip_dir + "/nginx-1.24.0";
+            var bc = new BrushConverter();
             nginx_name.Content = fileInf.Name;
+            if (fileInf.Exists)
+            {
+                check_distr.Content = "Дистрибутив найден";               
+                check_distr.Foreground = (Brush)bc.ConvertFrom("#10DDC2");
+            } else
+            {
+                check_distr.Content = "Дистрибутив не найден";
+                check_distr.Foreground = (Brush)bc.ConvertFrom("#F57170");
+            }
+            if (Directory.Exists(unzip_dir))
+            {
+                check_unzip.Content = "Архив распакован";
+                check_unzip.Foreground = (Brush)bc.ConvertFrom("#10DDC2");
+            } else
+            {
+                check_unzip.Content = "Архив не распакован";
+                check_unzip.Foreground = (Brush)bc.ConvertFrom("#F57170");
+            }
         }
 
         private void unzip_nginx_Click(object sender, RoutedEventArgs e)
         {
             FileInfo fileInf = new FileInfo(files[0]);
+            var bc = new BrushConverter();            
             string zip_string = files[0];
             ZipFile.ExtractToDirectory(zip_string, Directory.GetCurrentDirectory());
         }
