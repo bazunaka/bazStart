@@ -8,11 +8,13 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
+using System.Diagnostics;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
+using System.ServiceProcess;
 
 namespace bazStart
 {
@@ -22,20 +24,20 @@ namespace bazStart
     public partial class MainWindow : Window
     {
         string[] files = Directory.GetFiles(Directory.GetCurrentDirectory() + "\\downloads/");
-        string unzip_dir = Directory.GetCurrentDirectory();
-        
+        string unzip_dir = "C:/nginx-1.24.0";
+
         public MainWindow()
         {
-            InitializeComponent();           
+            InitializeComponent();
             FileInfo fileInf = new FileInfo(files[0]);
-            unzip_dir = unzip_dir + "/nginx-1.24.0";
             var bc = new BrushConverter();
             nginx_name.Content = fileInf.Name;
             if (fileInf.Exists)
             {
-                check_distr.Content = "Дистрибутив найден";               
+                check_distr.Content = "Дистрибутив найден";
                 check_distr.Foreground = (Brush)bc.ConvertFrom("#10DDC2");
-            } else
+            }
+            else
             {
                 check_distr.Content = "Дистрибутив не найден";
                 check_distr.Foreground = (Brush)bc.ConvertFrom("#F57170");
@@ -44,19 +46,63 @@ namespace bazStart
             {
                 check_unzip.Content = "Архив распакован";
                 check_unzip.Foreground = (Brush)bc.ConvertFrom("#10DDC2");
-            } else
+            }
+            else
             {
                 check_unzip.Content = "Архив не распакован";
                 check_unzip.Foreground = (Brush)bc.ConvertFrom("#F57170");
             }
-        }
+            var process = Process.GetProcessesByName("nginx");
+            if (process.Length == 0)
+            {
+                check_start.Content = "Процесс не запущен";
+                check_start.Foreground = (Brush)bc.ConvertFrom("#F57170");
+            }
+            else
+            {
+                check_start.Content = "Процесс запущен";
+                check_start.Foreground = (Brush)bc.ConvertFrom("#10DDC2");
+            }
+        }    
 
         private void unzip_nginx_Click(object sender, RoutedEventArgs e)
         {
             FileInfo fileInf = new FileInfo(files[0]);
             var bc = new BrushConverter();            
             string zip_string = files[0];
-            ZipFile.ExtractToDirectory(zip_string, Directory.GetCurrentDirectory());
+            ZipFile.ExtractToDirectory(zip_string, "C:\\");
+            System.Threading.Thread.Sleep(1000);
+            check_unzip.Content = "Архив распакован";
+            check_unzip.Foreground = (Brush)bc.ConvertFrom("#10DDC2");
+        }
+
+        private void start_nginx_Click(object sender, RoutedEventArgs e)
+        {
+            int i = 0;
+            ProcessStartInfo si = new ProcessStartInfo("D:\\GitHub\\bazStart\\bazStart\\bin\\x64\\Debug\\start_nginx.bat");
+            si.Verb = "runas";          
+            try
+            {
+                Process.Start(si);
+            }
+            catch (InvalidOperationException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            System.Threading.Thread.Sleep(1000);
+            var bc = new BrushConverter();
+            var process = Process.GetProcessesByName("nginx");
+            if (process.Length == 0)
+            {
+                check_start.Content = "Процесс не запущен";
+                check_start.Foreground = (Brush)bc.ConvertFrom("#F57170");
+            }
+            else
+            {
+                check_start.Content = "Процесс запущен";
+                check_start.Foreground = (Brush)bc.ConvertFrom("#10DDC2");
+            }
         }
     }
 }

@@ -14,3 +14,10 @@ D:\GitHub\bazStart\bazStart\obj\Debug\bazStart.csproj.GenerateResource.cache
 D:\GitHub\bazStart\bazStart\obj\Debug\bazStart.csproj.CoreCompileInputs.cache
 D:\GitHub\bazStart\bazStart\obj\Debug\bazStart.exe
 D:\GitHub\bazStart\bazStart\obj\Debug\bazStart.pdb
+D:\GitHub\bazStart\bazStart\bin\Debug\System.Diagnostics.EventLog.dll
+D:\GitHub\bazStart\bazStart\bin\Debug\System.Security.Principal.Windows.dll
+D:\GitHub\bazStart\bazStart\bin\Debug\System.ServiceProcess.ServiceController.dll
+D:\GitHub\bazStart\bazStart\bin\Debug\System.Diagnostics.EventLog.xml
+D:\GitHub\bazStart\bazStart\bin\Debug\System.Security.Principal.Windows.xml
+D:\GitHub\bazStart\bazStart\bin\Debug\System.ServiceProcess.ServiceController.xml
+D:\GitHub\bazStart\bazStart\obj\Debug\bazStart.csproj.CopyComplete
