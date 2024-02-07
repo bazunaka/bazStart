@@ -19,10 +19,13 @@
             </Grid.RowDefinitions>
             <Label x:Name="nginx_name" Content="Label" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center"/>
             <Button x:Name="unzip_nginx" Content="Распаковать NGINX" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Grid.Row="1" Click="unzip_nginx_Click"/>
-            <Button x:Name="start_nginx" Content="Запустить NGINX" HorizontalAlignment="Center" Margin="0,0,0,0" Grid.Row="2" VerticalAlignment="Center" Click="start_nginx_Click"/>
             <Label x:Name="check_distr" Grid.Column="1" Content="Label" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center"/>
             <Label x:Name="check_unzip" Grid.Column="1" Content="Label" HorizontalAlignment="Center" Margin="0,0,0,0" Grid.Row="1" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
             <Label x:Name="check_start" Grid.Column="1" Content="Label" HorizontalAlignment="Center" Margin="0,0,0,0" Grid.Row="2" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <Grid x:Name="grid_buttons" Grid.Column="0" Grid.Row="2">
+                <Button x:Name="start_nginx" Content="Запустить NGINX" HorizontalAlignment="Left" Margin="15,0,0,0" VerticalAlignment="Center" Click="start_nginx_Click"/>
+                <Button x:Name="stop_nginx" Content="Остановить NGINX" HorizontalAlignment="Right" Margin="0,0,15,0" VerticalAlignment="Center" Grid.Column="1"/>
+            </Grid>
         </Grid>
 
     </Grid>

@@ -57,11 +57,15 @@ namespace bazStart
             {
                 check_start.Content = "Процесс не запущен";
                 check_start.Foreground = (Brush)bc.ConvertFrom("#F57170");
+                stop_nginx.IsEnabled = false;
+                start_nginx.IsEnabled = true;
             }
             else
             {
                 check_start.Content = "Процесс запущен";
                 check_start.Foreground = (Brush)bc.ConvertFrom("#10DDC2");
+                stop_nginx.IsEnabled = true;
+                start_nginx.IsEnabled = false;
             }
         }    
 
@@ -78,7 +82,6 @@ namespace bazStart
 
         private void start_nginx_Click(object sender, RoutedEventArgs e)
         {
-            int i = 0;
             ProcessStartInfo si = new ProcessStartInfo("D:\\GitHub\\bazStart\\bazStart\\bin\\x64\\Debug\\start_nginx.bat");
             si.Verb = "runas";          
             try
@@ -102,6 +105,8 @@ namespace bazStart
             {
                 check_start.Content = "Процесс запущен";
                 check_start.Foreground = (Brush)bc.ConvertFrom("#10DDC2");
+                start_nginx.IsEnabled = false;
+                stop_nginx.IsEnabled = true;
             }
         }
     }
