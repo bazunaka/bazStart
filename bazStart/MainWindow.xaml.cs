@@ -109,5 +109,26 @@ namespace bazStart
                 stop_nginx.IsEnabled = true;
             }
         }
+
+        private void stop_nginx_Click(object sender, RoutedEventArgs e)
+        {
+            var bc = new BrushConverter();
+            try
+            {
+                foreach (var item in Process.GetProcessesByName("nginx"))
+                {
+                    item.Kill();
+                    System.Threading.Thread.Sleep(1000);
+                    start_nginx.IsEnabled = true;
+                    stop_nginx.IsEnabled = false;
+                    check_start.Content = "Процесс не запущен";
+                    check_start.Foreground = (Brush)bc.ConvertFrom("#F57170");
+                }
+            }
+            catch (InvalidOperationException ex) 
+            {
+                MessageBox.Show(ex.Message);
+            }   
+        }
     }
 }
