@@ -73,6 +73,16 @@ namespace bazStart
                 check_unzip.Content = "Архив не распакован";
                 check_unzip.Foreground = (Brush)bc.ConvertFrom("#F57170");
             }
+            if (Directory.Exists(postgres_file))
+            {
+                check_install_postgres.Content = "PostgreSQL установлен";
+                check_install_postgres.Foreground = (Brush)bc.ConvertFrom("#10DDC2");
+            }
+            else
+            {
+                check_install_postgres.Content = "PostgreSQL не установлен";
+                check_install_postgres.Foreground = (Brush)bc.ConvertFrom("#F57170");
+            }
             var process = Process.GetProcessesByName("nginx");
             if (process.Length == 0)
             {
@@ -150,6 +160,11 @@ namespace bazStart
             {
                 MessageBox.Show(ex.Message);
             }   
+        }
+
+        private void install_postgres_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

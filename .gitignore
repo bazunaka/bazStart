@@ -1,0 +1,83 @@
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Visual Studio files (except for .sln)
+*.[Oo]bj
+*.[Dd]bg
+*.[Mm]ap
+*.[Ii]lk
+*.[Ll]og
+*.[Pp]db
+*.resharper
+*.resharper.user
+*.TeamCity.*
+*.usersettings
+*.vs
+
+# .NET project files
+*.csproj.user
+*.vbproj.user
+*.user
+*.cache
+*.resharper
+*.resharper.user
+*.dnx.cache
+*.sqlite
+
+# Other project files
+*.pidb
+*.pdb
+*.mdf
+*.ldf
+*.ldf.bak
+*.ldf_MSSQL_DBA_Corp
+*.ldf_backup
+*.log
+*.tmp
+*.obj
+*.dll
+*.dll.config
+*.pch
+*.class
+*.ilk
+*.meta
+*.obj
+*.tlog
+*.sbr
+*.sql
+*.SQLite
+*.suo
+*.sln.docstates
+
+# CRT Debugger Files
+_d
+*.cdb
+*.pgp.dir
+*.pgp
+*.pgc
+*.pgd
+*.pdb
+
+# NuGet Packages
+**/packages/*
+packages/
+!**/packages/repositories.config
+!**/packages/repositories.config.backup
+!**/packages/sync.json
+!**/packages/sync.json.backup
+
+# MSTest test Results
+TestResults/
+
+# Build directories
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+build/
+bld/
+[Bb]in/
+[Oo]bj/

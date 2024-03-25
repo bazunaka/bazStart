@@ -17,6 +17,7 @@
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
             <Label x:Name="nginx_name" Grid.Column="0" Grid.Row="0" Content="Label" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center"/>
             <Button x:Name="unzip_nginx" Content="Распаковать NGINX" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Grid.Column="0" Grid.Row="1" Click="unzip_nginx_Click"/>
@@ -29,6 +30,8 @@
             </Grid>
             <Label x:Name="postgres_name" Content="Label" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Grid.Column="0" Grid.Row="3"/>
             <Label x:Name="postgres_check_dist" Content="Label" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Grid.Column="1" Grid.Row="3"/>
+            <Button x:Name="install_postgres" Content="Установить PostgreSQL" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Grid.Column="0" Grid.Row="4" Click="install_postgres_Click"/>
+            <Label x:Name="check_install_postgres" Grid.Column="1" Content="Label" HorizontalAlignment="Center" Margin="0,0,0,0" Grid.Row="4" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
         </Grid>
 
     </Grid>
