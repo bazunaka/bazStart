@@ -25,22 +25,43 @@ namespace bazStart
     {
         string[] files = Directory.GetFiles(Directory.GetCurrentDirectory() + "\\downloads/");
         string unzip_dir = "C:/nginx-1.24.0";
+        string postgres_file = "C:/Program Files/PostgreSQL/15";
 
         public MainWindow()
         {
             InitializeComponent();
             FileInfo fileInf = new FileInfo(files[0]);
+            FileInfo filePostgres = new FileInfo(files[1]);
             var bc = new BrushConverter();
             nginx_name.Content = fileInf.Name;
-            if (fileInf.Exists)
+            postgres_name.Content = filePostgres.Name;
+            if (fileInf.Exists && filePostgres.Exists)
             {
                 check_distr.Content = "Дистрибутив найден";
                 check_distr.Foreground = (Brush)bc.ConvertFrom("#10DDC2");
+                postgres_check_dist.Content = "Дистрибутив найден";
+                postgres_check_dist.Foreground = (Brush)bc.ConvertFrom("#10DDC2");
+            }
+            else if (!fileInf.Exists && filePostgres.Exists)
+            {
+                check_distr.Content = "Дистрибутив не найден";
+                check_distr.Foreground = (Brush)bc.ConvertFrom("#F57170");
+                postgres_check_dist.Content = "Дистрибутив найден";
+                postgres_check_dist.Foreground = (Brush)bc.ConvertFrom("#10DDC2");
+            }
+            else if (fileInf.Exists && !filePostgres.Exists)
+            {
+                check_distr.Content = "Дистрибутив найден";
+                check_distr.Foreground = (Brush)bc.ConvertFrom("#10DDC2");
+                postgres_check_dist.Content = "Дистрибутив не найден";
+                postgres_check_dist.Foreground = (Brush)bc.ConvertFrom("#F57170");
             }
             else
             {
                 check_distr.Content = "Дистрибутив не найден";
                 check_distr.Foreground = (Brush)bc.ConvertFrom("#F57170");
+                postgres_check_dist.Content = "Дистрибутив найден";
+                postgres_check_dist.Foreground = (Brush)bc.ConvertFrom("#10DDC2");
             }
             if (Directory.Exists(unzip_dir))
             {

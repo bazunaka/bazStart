@@ -8,7 +8,6 @@ D:\GitHub\bazStart\bazStart\bin\x64\Debug\System.Diagnostics.EventLog.xml
 D:\GitHub\bazStart\bazStart\bin\x64\Debug\System.Security.Principal.Windows.xml
 D:\GitHub\bazStart\bazStart\bin\x64\Debug\System.ServiceProcess.ServiceController.xml
 D:\GitHub\bazStart\bazStart\obj\x64\Debug\bazStart.csproj.AssemblyReference.cache
-D:\GitHub\bazStart\bazStart\obj\x64\Debug\bazStart.csproj.SuggestedBindingRedirects.cache
 D:\GitHub\bazStart\bazStart\obj\x64\Debug\MainWindow.g.cs
 D:\GitHub\bazStart\bazStart\obj\x64\Debug\App.g.cs
 D:\GitHub\bazStart\bazStart\obj\x64\Debug\bazStart_MarkupCompile.cache
@@ -18,6 +17,6 @@ D:\GitHub\bazStart\bazStart\obj\x64\Debug\bazStart.g.resources
 D:\GitHub\bazStart\bazStart\obj\x64\Debug\bazStart.Properties.Resources.resources
 D:\GitHub\bazStart\bazStart\obj\x64\Debug\bazStart.csproj.GenerateResource.cache
 D:\GitHub\bazStart\bazStart\obj\x64\Debug\bazStart.csproj.CoreCompileInputs.cache
-D:\GitHub\bazStart\bazStart\obj\x64\Debug\bazStart.csproj.CopyComplete
 D:\GitHub\bazStart\bazStart\obj\x64\Debug\bazStart.exe
 D:\GitHub\bazStart\bazStart\obj\x64\Debug\bazStart.pdb
+D:\GitHub\bazStart\bazStart\obj\x64\Debug\bazStart.csproj.Up2Date
